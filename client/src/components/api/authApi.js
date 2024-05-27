@@ -4,7 +4,7 @@ import axios from './axios';
 export const registerLandlord = async (userData) => {
   try {
     console.log(userData);
-    const response = await axios.post('/landlord/register', userData);
+    const response = await axios.post('api/landlord/register', userData);
     return response.data;
   } catch (error) {
     throw error.response.data;
@@ -12,7 +12,7 @@ export const registerLandlord = async (userData) => {
 };
 export const registerTenant = async (userData) => {
     try {
-      const response = await axios.post('/tenant/register', userData);
+      const response = await axios.post('api/tenant/register', userData);
       return response.data;
     } catch (error) {
       throw error.response.data;
@@ -20,7 +20,7 @@ export const registerTenant = async (userData) => {
   };
 export const loginLandlord = async (userData) => {
     try {
-      const response = await axios.post('/landlord/login', userData);
+      const response = await axios.post('api/landlord/login', userData);
       return response.data;
     } catch (error) {
       throw error.response.data;
@@ -29,7 +29,7 @@ export const loginLandlord = async (userData) => {
   export const loginTenant = async (userData) => {
     try {
       console.log(userData);
-      const response = await axios.post('/tenant/login', userData);
+      const response = await axios.post('api/tenant/login', userData);
       return response.data;
     } catch (error) {
       throw error.response.data;
